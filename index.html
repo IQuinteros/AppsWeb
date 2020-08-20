@@ -10,90 +10,134 @@
     <!--Estilo dentro del mismo html-->
     <style type="text/css">
         
-        /* # -> Para ser usado en "id". Debería usarse para un solo elemento, una sola vez*/
+        /* 
+            # -> Para ser usado en "id". Debería usarse para un solo elemento, una sola vez
+        */
         #banner{
             background-color: #a2f1b0;
-            width: 100%;
+            width: 1280px;
             height: 400px;
             float: left;
         }
 
-        /* . -> Se crea como "clase". Puede ser usado en múltiples elementos*/
-        .floatLeft{
+        #contenido{
+            background-color: #6647c5; 
+            width: 512px; 
             float: left;
         }
-        .floatRight{
-            float: right;
+
+        #pie{
+            background-color: #e072f9;
+            width: 1280px;
+            height: 300px;
+            float: left;
         }
 
-        /* Para modificar el estilo directamente de componentes de html */
+        #envoltura{
+            /* Definir el límite a trabajar */
+            width: 1280px;
+            /* 
+                Se aplica un margin Vertical (0) | Horizontal (auto)
+
+                - La propiedad "auto", al detectar un contenido con un
+                ancho menor a la pantalla, "auto" centrará el contenido
+
+                Más sobre margin:
+                https://developer.mozilla.org/es/docs/Web/CSS/margin
+            */
+            margin: 0 auto;
+        }
+
+        /* 
+            . -> Se crea como "clase". Puede ser usado en múltiples elementos
+        */
+        .column{
+            background-color: #0d4a18; 
+            width: 384px;
+            float: left;
+        }
+
+        /* 
+            Para modificar el estilo directamente de componentes de html 
+        */
         img{
             /* Todas las imágenes ajustarán la propiedad "object-fit" a cover*/
-            object-fit: cover; 
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <h1>Usar identificadores CSS</h1>
-    <h2>Clase: 20/08/2020</h2>
+    <!-- 
+        Un body NO tiene un tamaño definido. Es algo abstracto
+        Hay que trabajar sobre una envoltura, para definir el espacio de trabajo
+    -->
 
-    <div id="banner">
-        <img src="assets/bird.jpg" style="width: 100%; height: 400px; object-fit: cover;"/>
+    <div id="envoltura">
+
+        <h1>Usar identificadores CSS</h1>
+        <h2>Clase: 20/08/2020</h2>
+
+        <!-- Usar los identificadores definidas en la etiqueta style-->
+        <div id="banner">
+            <!-- La imagen ya tiene la propiedad object-fit: cover aplicado -->
+            <img src="assets/bird.jpg" style="width: 100%; height: 400px;"/>
+        </div>
+        <div class="column">2</div>
+        <div id="contenido">3</div>
+        <div class="column">4</div>
+        <div id="pie">5</div>
+
+        <div style="height: 100px;">&nbsp;</div>
+
+        <h1>Imágenes</h1>
+        <h2>Clase: 20/08/2020</h2>
+
+        <div style="background-color: #a2f1b0; width: 100%; height: 400px; float: left;">
+            <!-- No es necesario colocar object-fit: cover, ya que está definido en la etiqueta style-->
+            <img src="assets/bird.jpg" style="width: 100%; height: 400px; object-fit: cover;"/>
+        </div>
+        <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
+        <div style="background-color: #6647c5; width: 40%; float: left;">3</div>
+        <div style="background-color: #db8693; width: 30%; float: right;">4</div>
+        <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
+
+        <div style="height: 100px;">&nbsp;</div>
+
+        <h1>Formas de estructurar Divs</h1>
+        <h2>Clase: 20/08/2020</h2>
+
+        <div style="background-color: #a2f1b0; width: 100%; float: left;">1</div>
+        <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
+        <div style="background-color: #6647c5; width: 40%; float: left;"></div>
+        <!--
+            Se usar la propiedad float, establecida en right
+            para que quede en el lado derecho
+        -->
+        <div style="background-color: #db8693; width: 30%; float: right;">4</div>
+        <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
+
+        <div style="height: 100px;">&nbsp;</div>
+
+        <div style="background-color: #a2f1b0; width: 100%; float: left;">1</div>
+        <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
+        <!--
+            Se usa &nbsp para que el div tenga contenido
+        -->
+        <div style="background-color: #6647c5; width: 40%; float: left;">&nbsp;</div>
+        <div style="background-color: #db8693; width: 30%; float: left;">4</div>
+        <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
+
+        <div style="height: 100px;">&nbsp;</div>
+
+        <div style="background-color: #a2f1b0; width: 100%; float: left;">1</div>
+        <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
+        <!--
+            Se usa <br> para que el div tenga contenido
+        -->
+        <div style="background-color: #6647c5; width: 40%; float: left;"><br></div>
+        <div style="background-color: #db8693; width: 30%; float: left;">4</div>
+        <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
+
     </div>
-    <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
-    <!-- Usar las "clases" definidas en la etiqueta style-->
-    <div class="floatLeft" style="background-color: #6647c5; width: 40%;">3</div>
-    <div class="floatRight" style="background-color: #db8693; width: 30%;">4</div>
-    <div class="floatLeft" style="background-color: #e072f9; width: 100%;">5</div>
-
-    <div style="height: 100px;">&nbsp;</div>
-
-    <h1>Imágenes</h1>
-    <h2>Clase: 20/08/2020</h2>
-
-    <div style="background-color: #a2f1b0; width: 100%; height: 400px; float: left;">
-        <img src="assets/bird.jpg" style="width: 100%; height: 400px; object-fit: cover;"/>
-    </div>
-    <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
-    <div style="background-color: #6647c5; width: 40%; float: left;">3</div>
-    <div style="background-color: #db8693; width: 30%; float: right;">4</div>
-    <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
-
-    <div style="height: 100px;">&nbsp;</div>
-
-    <h1>Formas de estructurar Divs</h1>
-    <h2>Clase: 20/08/2020</h2>
-
-    <div style="background-color: #a2f1b0; width: 100%; float: left;">1</div>
-    <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
-    <div style="background-color: #6647c5; width: 40%; float: left;"></div>
-    <!--
-        Se usar la propiedad float, establecida en right
-        para que quede en el lado derecho
-    -->
-    <div style="background-color: #db8693; width: 30%; float: right;">4</div>
-    <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
-
-    <div style="height: 100px;">&nbsp;</div>
-
-    <div style="background-color: #a2f1b0; width: 100%; float: left;">1</div>
-    <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
-    <!--
-        Se usa &nbsp para que el div tenga contenido
-    -->
-    <div style="background-color: #6647c5; width: 40%; float: left;">&nbsp;</div>
-    <div style="background-color: #db8693; width: 30%; float: left;">4</div>
-    <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
-
-    <div style="height: 100px;">&nbsp;</div>
-
-    <div style="background-color: #a2f1b0; width: 100%; float: left;">1</div>
-    <div style="background-color: #0d4a18; width: 30%; float: left;">2</div>
-    <!--
-        Se usa <br> para que el div tenga contenido
-    -->
-    <div style="background-color: #6647c5; width: 40%; float: left;"><br></div>
-    <div style="background-color: #db8693; width: 30%; float: left;">4</div>
-    <div style="background-color: #e072f9; width: 100%; float: left;">5</div>
 </body>
 </html>
