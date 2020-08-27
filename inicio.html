@@ -1,13 +1,95 @@
-<!-- Ejercicio Clase 27/08/2020 -->
+<!-- 
+    Ejercicio Clase 27/08/2020 
+
+    Autor: Ignacio Quinteros Fuentes
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Meta, es para la información que necesita el servidor, para interpretar el lenguaje -->
+
+    <!-- Para no tener problemas con tildes, se usa UTF-8 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+
+    <!-- 
+        Para "linkear" recursos, se usa la etiqueta "link"
+        En "href", indicamos la ubicación del estilo.
+    -->
+    <link rel="stylesheet" type="text/css" href="css/style_inicio.css">
 </head>
 <body>
     
+    <!-- 
+        Siempre necesitaremos el div de envoltura.
+        Esta envoltura definirá nuestra área de trabajo.
+        
+        Trabajar en el body, no es recomendado, porque no podemos
+        trabajar en "el 40% del body", porque el body es algo abstracto
+    -->
+    <!--
+        Aquí irá la envoltura 
+
+        Tiene el estilo "wrapper", declarado en el archivo css "style_inicio"
+    -->
+    <div id="wrapper">
+        <!-- 
+            Aquí irá el banner 
+
+            Tiene el estilo "banner", declarado en el archivo css "style_inicio"
+        -->
+        <div id="banner"></div>
+
+        <!-- 
+            Aquí irá la navegación 
+
+            Tiene el estilo "nav", declarado en el archivo css "style_inicio"
+        -->
+        <div id="nav"></div>
+
+        <!-- 
+            Aquí irá el título 
+
+            Tiene el estilo "title", declarado en el archivo css "style_inicio"
+
+            Observación: Ahora usamos "class" en vez de "id", porque el estilo "title"
+            es un selector "clase"
+        -->
+        <div class="title">Título</div>
+
+        <!-- Aquí irá la columna izquierda -->
+        <div class="column"></div>
+
+        <!-- Aquí irá el contenido -->
+        <div class="content">
+            
+            <!-- Aquí irá un párrafo -->
+            <div class="parrafo">
+                <!-- 
+                    Texto de relleno.
+                    El texto de relleno, puede obtenerse buscando "Lorem Ipsum"
+
+                    En mi caso, lo obtuve de: https://getlorem.com/es/
+                -->
+                Lorem ipsum dolor sit amet consectetur adipiscing, elit proin ut quam curae, iaculis conubia nascetur tempus praesent. Nullam tortor accumsan nec aliquam interdum condimentum vestibulum, netus proin nibh ridiculus egestas sollicitudin varius pellentesque, fames ultricies ac nisl felis viverra. A bibendum auctor facilisi erat luctus venenatis suscipit congue nisl semper sapien, ultrices ad torquent urna nam sollicitudin sociosqu dictumst elementum varius, imperdiet magna feugiat massa justo litora interdum nec montes curabitur.
+
+                Venenatis aliquam montes vestibulum felis non himenaeos vivamus, mauris dictum ante fusce odio sociosqu. Dapibus sapien fermentum ligula vestibulum aliquam semper primis phasellus faucibus cras, dictumst enim in erat sodales ante duis habitant tincidunt ornare, condimentum interdum aliquet tristique ac eu urna nibh nostra. Cursus imperdiet posuere ut conubia porta malesuada duis cum, nisl metus ante habitasse elementum pulvinar sed donec, ad aptent torquent eros at inceptos massa.
+            
+            </div>
+
+            <!-- 
+                Aquí irán los thumbnails 
+
+                Thumbnails, son miniaturas. Es decir, imágenes aal final del día
+            -->
+            <div></div>
+            <div></div>
+
+        </div>
+    </div>
+
 </body>
 </html>
