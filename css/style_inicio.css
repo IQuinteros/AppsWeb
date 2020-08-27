@@ -89,6 +89,10 @@ body{
 
     /* Navegación flotante */
     float: left;
+
+    /* Centrar el texto que haya dentro */
+    text-align: center;
+
 }
 
 /* 
@@ -113,6 +117,16 @@ body{
         Más información en: https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
     */
     text-align: center;
+
+    /* Fuente de letra */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Tamaño de letra */
+    font-size: 25px;
+    /* 
+        Grosor de la letra (Bold es negrita) 
+        Más información: https://developer.mozilla.org/es/docs/Web/CSS/font-weight
+    */
+    font-weight: bold;
 }
 
 /*
@@ -228,4 +242,78 @@ body{
     /* Dejar sin relleno abajo del thumbnail*/
     padding-bottom: 0;
 
+}
+
+/* Estilo de botonera */
+#botonera{
+    /* Ancho de la botonera */
+    width: 500px;
+    /* Altura de la botonera */
+    height: 80px;
+
+    /* Centrar la botonera */
+    margin: 0 auto;
+
+    /* Puntos de la lista */
+    list-style-position: inside;
+
+    /*
+        No colocar float: left,
+        porque sino, no se centrará la botonera
+    */
+
+}
+
+/* COMPOSICIÓN DE SELECTORES */
+
+/* Estilo de un botón */
+#boton{
+    /* No dejar espacio de relleno en ningún lado */
+    padding: 0px;
+}
+
+/* Estilo de los "li" que están dentro de la etiqueta "ul" en "inicio.html" */
+#boton li{
+    /* NO hacer saltos de línea entre los elementos */
+    display: inline;
+}
+
+/* Estilo de los "a" que están dentro de los "li" que están dentro del elemento con id "boton" */
+#boton li a{
+    /* 
+        Decoración del texto (Formato de texto)
+        Más información: https://developer.mozilla.org/es/docs/Web/CSS/text-decoration
+    */ 
+    text-decoration: none;
+    /* Fuente de letra */
+    font-family: monospace;
+    /* Tamaño de letra*/
+    font-size: 22px;
+    /* Flotante a la izquierda */
+    float: left;
+    /* Relleno vacío, a la derecha */
+    padding-right: 10px;
+    /* Color de fondo */
+    background-color: #35352E;
+    /* Color de texto */
+    color: #FEFEF3;
+}
+
+/*
+    Hover: Cuando colocamos el puntero encima del elemento
+    
+    Estilo cuando hay hover, en la etiqueta "a", que están dentro de los "li",
+    que están dentro del elemento con id "boton"
+*/
+#boton li a:hover{
+    /* Color de fondo */
+    background-color: #BDBDAF;
+    /* Margen superior (Valor negativo, hace como un efecto contrario) */
+    margin-top: -6px;
+    /* Relleno con espacio vació, abajo del elemento */
+    padding-bottom: 10px;
+    /* Color del texto */
+    color: #34352E;
+    /* Grosor del texto */
+    font-weight: bold;
 }
