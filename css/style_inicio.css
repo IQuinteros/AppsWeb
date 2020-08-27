@@ -1,0 +1,231 @@
+/*
+    Estilo ocupado en la clase 27/08/2020
+
+    Usado en "inicio.html"
+
+    Autor: Ignacio Quinteros Fuentes
+*/
+
+/* Estilo para el body (Directamente a la ETIQUETA body) */
+body{
+    /* Color de fondo (Recordar que está en hexadecimal) */
+    background-color: #F9F9F3;
+}
+
+/*
+    Estilo para la envoltura.
+    Wrapper es Envoltura
+
+    Al usar "#", este estilo wrapper será utilizado a través del ID de la etiqueta.
+    Por lo tanto, se utilizará SOLO 1 VEZ.
+
+    (Resumen: Cuando usamos un estilo, 1 vez nada más, usamos "#")
+*/
+#wrapper{
+
+    /* 
+        Ancho de la envoltura 
+        A veces, es bueno que los límites, coincidan con las imágenes más grandes,
+        para no tener mayores problemas. En cualquier caso, no siempre se puede
+        saber exactamente el tamaño de los recursos, pero hay soluciones para ese caso.
+    */
+    width: 1280px;
+
+    /* Para centrar el contenido */
+    margin: 0 auto;
+}
+
+/* Estilo para el banner */
+#banner{
+    /* Ancho del banner */
+    width: 1280px;
+
+    /* Alto del banner */
+    height: 300px;
+
+    /* Banner flotante */
+    float: left;
+
+    /* 
+        Imagen del banner. En url, hay que dar la ubicación de la imagen
+
+        CUIDADO: Tendremos que ir a la carpeta "assets", por lo tanto, hay que
+            "subir" un directorio, porque ahora estamos en la carpeta "css"
+
+            Para subir un directorio, usamos "../"
+     */
+    background-image: url("../assets/taxi.jpg");
+
+    /* 
+        Hay que ajustar la imagen de fondo.
+        ¿Por qué? Porque las imágenes son más grandes que el tamaño de los elementos.
+        Para esto, hay que hacer lo siguiente:
+
+        Primero: Tamaño de la imagen de fondo.
+        Información: https://developer.mozilla.org/es/docs/Web/CSS/background-size
+    */
+    background-size: cover;
+    /* 
+        Segundo: Posición de la imagen de fondo.
+        Información: https://developer.mozilla.org/es/docs/Web/CSS/background-position
+    */
+    background-position: center;
+}
+
+/* Estilo del panel de navegación */
+#nav{
+    /*
+        Ancho del panel de navegación.
+
+        Importante: Idealmente, los desarrolladores no deberían trabajar con tamaños exactos,
+            es decir, usan porcentajes como tamaño.
+            Al usar divs, con tamaños fijos, finalmente pareciera que se usan tablas, y se
+            "desaprovecha" el potencial de un div.
+    */
+    width: 1280px;
+
+    /* Alto del panel */
+    height: 80px;
+
+    /* Navegación flotante */
+    float: left;
+}
+
+/* 
+    Estilo del título 
+
+    Title = título
+
+    En la página, puede haber más de un título, por lo tanto,
+    se dejará expresado como clase. Por lo tanto, ya no usaremos "#",
+    ahora usaremos "." (un punto)
+
+    Para usar este estilo en una etiqueta, usamos "class=" en la etiqueta.
+
+*/
+.title{
+    /* Ancho del título */
+    width: 1280px;
+    /* Título flotante */
+    float: left;
+    /*
+        Alineación del texto.
+        Más información en: https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+    */
+    text-align: center;
+}
+
+/*
+    Hasta ahora se han usado selectores de tipo ID (#ejemplo), 
+    selectores clase (.ejemplo)
+    y selectores de tipo (body)
+
+    Para más información sobre estos selectores:
+    Selectores de Clase: https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors
+    Selectores de ID: https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors
+    Selectores de Tipo: https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors
+*/
+
+/* Estilo de una columna */
+.column{
+    /* Ancho de la columna */
+    width: 200px;
+    /* Alto de la columna */
+    height: 640px;
+    /* Flotante a la izquierda */
+    float: left;
+
+    /* Imagen de fondo */
+    background-image: url("../assets/cat.jpg");
+
+    /* Hay que ajustar la imagen de fondo*/
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo del contenido */
+#content{
+    /* Ancho del contenido */
+    width: 1080px;
+    /* Contenido flotante a la izquierda */
+    float: left;
+}
+
+/* Estilo de un párrafo */
+.paragraph{
+    /* Ancho del párrafo (Esta vez, usamos porcentaje) */
+    width: 80%;
+
+    /* Flotante a la izqierda */
+    float: left;
+    
+    /*
+        Fuente de letra del párrafo.
+        Colocamos más de una fuente, porque a veces puede haber una
+        fuente que NO esté disponible. Así, siempre habrá una fuente que esté de
+        reemplazo
+    */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* Tamaño de letra */
+    font-size: 18px;
+    /* Alineación de texto (Al centro) */
+    text-align: justify;
+
+    /* 
+        Relleno al lado derecho del párrafo (Es un relleno vacío) 
+        Así los elementos no quedan "juntos" directamente
+    */
+    padding-right: 15px;
+    /* Relleno al lado izquierdo del párrafo*/
+    padding-left: 15px;
+}
+
+/* Estilo de un thumbnail */
+.thumbnail{
+
+    /* Flotante a la izquierda */
+    float: left;
+
+    /* Anchura del thumbnail */
+    width: 180px;
+    /* Alto del thumbnail */
+    height: 200px;
+
+    /* Imágen de fondo del thumbnail */
+    background-image: url("../assets/butterfly.jpg");
+
+    /* 
+        Ajustar la imagen de fondo 
+        Contain: La imagen queda proporcional al tamaño 
+        (La imagen se ve completamente)
+    */
+    background-size: contain;
+    background-position: center;
+
+    /* 
+        Para que, en caso de que la imagen sea más pequeña que el tamaño del elemento,
+        no se repita la imagen (Por defecto, se repite)
+
+        Más información: https://developer.mozilla.org/es/docs/Web/CSS/background-repeat
+    */
+    background-repeat: no-repeat;
+
+    /* Dejar sin relleno abajo del thumbnail*/
+    padding-bottom: 0;
+}
+
+/* Estilo de un thumbnail (SIN USAR DIV, SOLO IMAGE EN HTML)*/
+.thumbnailNoDiv{
+    /* Flotante a la izquierda */
+    float: left;
+
+    /* Anchura del thumbnail */
+    width: 180px;
+    /* Alto del thumbnail */
+    height: 200px;
+
+    /* Dejar sin relleno abajo del thumbnail*/
+    padding-bottom: 0;
+
+}
