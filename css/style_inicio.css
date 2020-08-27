@@ -254,9 +254,6 @@ body{
     /* Centrar la botonera */
     margin: 0 auto;
 
-    /* Puntos de la lista */
-    list-style-position: inside;
-
     /*
         No colocar float: left,
         porque sino, no se centrará la botonera
