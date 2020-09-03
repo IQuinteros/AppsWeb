@@ -1,0 +1,19 @@
+
+.pNoticias{
+    /* Ancho y alto */
+    width: 600px;
+    height: 300px;
+
+    /* Fuente de letra */
+    font-family: "Lucida Console", Monaco, monospace;
+    /* Tamaño de fuente */
+    font-size: 18px;
+    /* Alineación del texto */
+    text-align: justify;
+    /* Flotante */
+    float: left;
+    /* Espacio adicional del lado derecho del elemento (No confundir con margin) */
+    padding-right: 10px;
+    /* Espacio adicional del lado izquierdo del elemento (No confundir con margin) */
+    padding-left: 10px;
+}
