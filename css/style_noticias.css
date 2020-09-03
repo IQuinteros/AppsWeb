@@ -17,3 +17,50 @@
     /* Espacio adicional del lado izquierdo del elemento (No confundir con margin) */
     padding-left: 10px;
 }
+
+/* 
+    Afectar al primer div, que esté dentro de la clase pNoticias. USAR EL SIGNO >
+*/
+.pNoticias>div{
+    text-align: justify;
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+/* 
+    Afectar al span, que venga justo después del div, que venga justo después del elemento
+    que tenga la clase pNoticias
+*/
+.pNoticias>div>span{
+    /* 
+        Definir que la posición sea Absoluta.
+        Más información: https://developer.mozilla.org/es/docs/Web/CSS/position
+    */
+    position: absolute;
+    top: 0;
+}
+
+/*
+    SI ARRIBA, HUBIÉSEMOS PUESTO SOLO "pNoticias div", SIN EL >
+    LO QUE PASARÍA ES QUE AFECTARÁ A TODOS LOS DIVS DENTRO DEL ELEMENTO
+    PNOTICIAS
+
+    Con >, especificamos aún más a quién afectar
+*/
+
+/* Estilo del video */
+.video{
+    width: 400px;
+    height: 300px;
+
+    /* Para que quede flotando a la derecha */
+    float: right;
+    padding-bottom: 15px;
+}
+
+/* Estilo del span que está resaltado */
+.alerta{
+    color: red;
+    font-weight: bold;
+}
