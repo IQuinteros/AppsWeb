@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema: Texto en Top</title>
+
+    <style type="text/css">
+        #container{
+            width: 500px;
+            height: 450px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+
+        #container div{
+            text-align: justify;
+            position: relative;
+            /* 
+                Cambiar width o height entre 300 y 500 para visualizar mejor 
+                que es un div dentro de otro
+            */
+            width: 450px;
+            height: 400px;
+            border: 1px solid #0a0f77;
+            float: left;
+
+        }
+
+        #container div span{
+            position: absolute;
+            /* Esto permite que quede en top del div que lo contiene*/
+            /* Teniendo top, el texto se va hacia abajo si es demasiado largo */
+
+            top: 0;
+
+            /* 
+                Esto permite que quede en el pie del div que lo contiene
+                ( Está comentado para que no funcione )
+            */
+            /* Teniendo bottom, el texto se va hacia arriba */
+            /*bottom: 0;*/
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div>
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, mus nisi tristique lobortis molestie porttitor bibendum est natoque, tortor aliquam phasellus potenti fames erat ante. Neque fringilla vivamus curabitur mauris praesent ultrices elementum, fames rutrum sociosqu dictum cursus pretium per, a suscipit tellus pellentesque magna augue. Conubia integer quis felis curabitur senectus pellentesque vivamus ut a quam inceptos, ultricies dui nunc nostra metus varius fusce purus platea.
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>
