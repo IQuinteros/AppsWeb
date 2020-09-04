@@ -1,0 +1,37 @@
+.main-nav li{
+    display: inline;
+}
+
+.main-nav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+    background-color: #2E0014;
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 1px 1px #00000060;
+
+    border: none;
+
+}
+
+.main-nav li a:hover{
+    color: white;
+    padding: 12px 20px;
+}
+
+.main-nav li a:active{
+    box-shadow: none;
+}
+
+.main-nav{
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#nav{
+    float: left;
+    width: 100%;
+}
