@@ -1,25 +1,38 @@
+/* Representando a la "envoltura" que contendrá cada artículo */
 .main{
+    /* Alto y ancho de la envoltura */
     width: 500px;
     height: 500px;
 
+    /* Color de fondo de la envoltura */
     background-color: #faebf5;
+    /* Espacio de padding. Solo estética */
     padding: 20px;
 }
 
 .article{
+    /* Ancho de un 40%. Solo para que caigan dos artículos en fila */
     width: 40%;
+    /* Para que los artículos no queden pegados uno de otro */
     margin: 10px 10px;
 
+    /* Para que el artículo pueda ir a la derecha del anterior (Si es que hay espacio) */
     float: left;
 
+    /* Solo añadir un borde de bonito */
     border: 1px #cc3399 solid;
+    /* Espacio interno. Solo estética */
     padding: 10px;
 }
 
+/* Para afectar a la imagen dentro del artículo */
 .article > img{
+    /* Para que la imagen se ajuste al tamaño del artículo */
     width: 100%;
 }
 
+/* Para afectar al párrafo dentro del artículo */
 .article > p{
+    /* Centrar el texto */
     text-align: center;
 }
