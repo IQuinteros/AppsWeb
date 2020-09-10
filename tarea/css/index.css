@@ -8,3 +8,15 @@
 
     margin: 0 auto;
 }
+
+.main-message{
+    background-color: #008DFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+    margin: 0 50px;
+    margin-top: 20px;
+
+    color: white;
+    box-shadow: 3px 3px #00000080;
+}
